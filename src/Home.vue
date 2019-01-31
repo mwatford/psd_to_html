@@ -1,0 +1,185 @@
+<template>
+  <main>
+    <div class="slider">
+      <h1 class="slider__h1">{{ title1 }}</h1>
+      <h2 class="slider__h2">{{ title2 }}</h2>
+      <button class="slider__button">See portfolio</button>
+    </div>
+    <div class="contentOne">
+      <div class="contentOne__icon" v-for="key in news">
+        <picture>
+          <img :src="key.img" alt="#">
+        </picture>
+        <h3>{{ key.title }}</h3>
+        <p>{{ key.text }}</p>
+        <p>{{ key.id }}</p>
+      </div>
+    </div>
+    <div class="contentTwo">
+      <h3 class="contentTwo__header">Latest</h3>
+      <div class="contentTwo__post" v-for="post in posts">
+        <picture>
+          <img :src="post.img" alt="#">
+        </picture>
+        <h2>Nobis Bussiness Card</h2>
+        <p>{{ placeholderText }}</p>
+      </div>
+    </div>
+    <div class="quote">
+      <picture class="quote__sign">
+        <img src="./assets/img/quotes.png" alt="#">
+      </picture>
+      <p class="quote__text">{{ quote }}</p>
+    </div>
+  </main>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      title1: 'We are a digital & branding agency based in London.',
+      title2: 'We love to turn great ideas into beautiful products.',
+      quote: 'Cras nattus consectetur purus sit amet fementum. \
+        Donec id elit non mi porta gravida at eget metus. Duis mollis,\
+        est non commodo luctus erat porttitor.',
+      news: [
+        {
+          id: 1,
+          img: `./src/assets/img/icon1.png`,
+          title: 'Tristiquet',
+          text: 'Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
+            ut fermentum massa justo risus.'
+        },
+        {
+          id: 2,
+          img: `./src/assets/img/icon1.png`,
+          title: 'Tristiquet',
+          text: 'Fusce depibis, moje commodore, tortor mauris condimentum nibh,\
+            ut fermentum massa justo risus.'
+        },
+        {
+          id: 3,
+          img: `./src/assets/img/icon1.png`,
+          title: 'Tristiquet',
+          text: 'Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
+            ut fermentum massa justo risus.'
+        },
+        {
+          id: 4,
+          img: `./src/assets/img/icon1.png`,
+          title: 'Tristiquet',
+          text: 'Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
+            ut fermentum massa justo risus.'
+        }
+      ],
+      placeholderText: 'Cras nattus consectetur purus sit amet fementum.\
+				  Donec id elit non mi porta gravida at eget metus. Duis mollis,\
+          est non commodo luctus erat porttitor.',
+      posts: [
+        { img: './src/assets/img/post1.png' },
+        { img: './src/assets/img/post1.png' },
+        { img: './src/assets/img/post1.png' },
+      ]
+    }
+  },
+  props: {
+
+  }
+  
+}
+</script>
+
+<style lang="scss">
+.slider {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+    display: flex;
+    background: url('assets/img/slider1.png') no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    flex-flow: column;
+    justify-content: center;
+    
+    font-family: 'Roboto Slab', serif;
+
+    &__button {
+        background-color: #3f8dbf;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        width: 150px;
+        height: 35px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        align-self: center;
+        margin-top: 1.8vw;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__h1 {
+        align-self: center;
+        color: #f3f3f3;
+    }
+
+    &__h2 {
+        align-self: center;
+        color: #a8a8a8;
+    }
+}
+.contentOne__icon {
+    align-content: center;
+    border-bottom: 1px solid #d7d7d7;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20% 10%;
+    text-align: center;
+}
+.contentTwo__header {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    text-transform: uppercase;
+    padding: 0;
+    // padding: auto 0;
+    display: flex;
+    align-self: center;
+}
+.contentTwo__post {
+    font-size: 0.9em;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    // justify-content: center;
+
+    picture img {
+        height: auto;
+        width: 100%;
+    }
+
+}
+.quote {
+    display: flex;
+    flex-flow: column;
+    background-color: #efefef;
+    align-items: center;
+    justify-content: center;
+
+    &__sign {
+        margin: 0 auto;
+    }
+
+    &__text {
+        padding: 0 30%;
+        color: #a1a1a1;
+        font-family: 'Bitter', serif;
+        text-align: center;
+    }
+}
+</style>
