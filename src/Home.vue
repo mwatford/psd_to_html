@@ -46,28 +46,28 @@ export default {
       news: [
         {
           id: 1,
-          img: `./src/assets/img/icon1.png`,
+          img: require(`./assets/img/icon1.png`),
           title: 'Tristiquet',
           text: 'Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
             ut fermentum massa justo risus.'
         },
         {
           id: 2,
-          img: `./src/assets/img/icon1.png`,
+          img: require(`./assets/img/icon1.png`),
           title: 'Tristiquet',
           text: 'Fusce depibis, moje commodore, tortor mauris condimentum nibh,\
             ut fermentum massa justo risus.'
         },
         {
           id: 3,
-          img: `./src/assets/img/icon1.png`,
+          img: require(`./assets/img/icon1.png`),
           title: 'Tristiquet',
           text: 'Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
             ut fermentum massa justo risus.'
         },
         {
           id: 4,
-          img: `./src/assets/img/icon1.png`,
+          img: require('./assets/img/icon1.png'),
           title: 'Tristiquet',
           text: 'Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
             ut fermentum massa justo risus.'
@@ -77,9 +77,9 @@ export default {
 				  Donec id elit non mi porta gravida at eget metus. Duis mollis,\
           est non commodo luctus erat porttitor.',
       posts: [
-        { img: './src/assets/img/post1.png' },
-        { img: './src/assets/img/post1.png' },
-        { img: './src/assets/img/post1.png' },
+        { img: require('./assets/img/post1.png') },
+        { img: require('./assets/img/post1.png') },
+        { img: require('./assets/img/post1.png') },
       ]
     }
   },
