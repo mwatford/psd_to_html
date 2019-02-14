@@ -3,8 +3,8 @@
 	<div class="navbar">
 		<div id="title" class="navbar__title">marble</div>
 		<ul class="navbar__menu">
-			<li v-for="key in menu">
-				<router-link :to="key.path" exact>{{ key.value }}</router-link>
+			<li v-for="item in menu">
+				<router-link :to="item.path" exact>{{ item.value }}</router-link>
 			</li>
 		</ul>
 	</div>

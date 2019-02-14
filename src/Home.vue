@@ -6,18 +6,18 @@
       <button class="slider__button">See portfolio</button>
     </div>
     <div class="contentOne">
-      <div class="contentOne__icon" v-for="key in news">
+      <div class="contentOne__icon" v-for="(item, index) in news" :key="index">
         <picture>
-          <img :src="key.img" alt="#">
+          <img :src="item.img" alt="#">
         </picture>
-        <h3>{{ key.title }}</h3>
-        <p>{{ key.text }}</p>
-        <p>{{ key.id }}</p>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+        <p>{{ item.id }}</p>
       </div>
     </div>
     <div class="contentTwo">
       <h3 class="contentTwo__header">Latest</h3>
-      <div class="contentTwo__post" v-for="post in posts">
+      <div class="contentTwo__post" v-for="(post, index) in posts" :key="index">
         <picture>
           <img :src="post.img" alt="#">
         </picture>
@@ -99,8 +99,15 @@ export default {
     background-position: center center;
     background-size: cover;
 
+    @media (max-width: 50em) {
+      background-size: fill;
+      font-size: 0.8em;
+    }
+
     flex-flow: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     
     font-family: 'Roboto Slab', serif;
 
@@ -150,6 +157,10 @@ export default {
     // padding: auto 0;
     display: flex;
     align-self: center;
+
+    @media (max-width: 50em) {
+      grid-column: 1;
+    }
 }
 .contentTwo__post {
     font-size: 0.9em;

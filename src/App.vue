@@ -55,6 +55,9 @@ main {
     display: grid;
     grid-template-columns: 215fr repeat(3, 390fr) 215fr;
     grid-template-rows:  450fr 335fr auto 210fr;
+    @media (max-width: 50em) {
+      grid-template-rows: minmax(auto, 70vw) 400vh auto 30vw;
+    }
 }
 .contentOne {
     grid-row: 2;
@@ -63,6 +66,10 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
+
+    @media (max-width: 50em ) {
+      grid-template-columns: 100%;
+    }
 }
 .contentTwo {
     grid-column: 2 / span 3;
@@ -70,8 +77,14 @@ main {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:  repeat(2, max-content);
+    grid-template-rows: repeat(2, max-content);
     grid-gap: 15px;
+
+    @media (max-width: 50em ) {
+      // display: flex;
+      grid-template-columns: 100%;
+      grid-auto-rows: auto;
+    }
 }
 .quote {
     grid-column: 1 / span 5;
