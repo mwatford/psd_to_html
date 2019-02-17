@@ -3,7 +3,6 @@
 	<div class="navbar">
 		<div id="title" class="navbar__title">marble</div>
 		<div class="navbar__menu">
-			<div class="navbar__menuDropButton">MENU</div>
 			<div class="navbar__menuItems">
 				<router-link 
 					v-for="(item, index) in menu" :key="index"
@@ -12,6 +11,8 @@
 					{{ item.value }}
 				</router-link>
 			</div>
+
+			<div id="menuButton" class="navbar__menuDropButton">MENU</div>
 		</div>
 	</div>
 </nav>
@@ -35,39 +36,47 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+$text-primary: #4e4e4e;
+$text-secondary: #1abb9c;
 a {
 	@media (max-width: 40em) {
-		display: block;
+		display: flex;
 		background-color: #e5e5e5;
 		width: 25vw;
-		// height: 10vw;
-		border-bottom: 1px solid #4e4e4e;
-		justify-content: end;
+		height: 5vw;
+		border-bottom: 1px solid $text-primary;
+		justify-content: start;
+		align-items: center;
+		z-index: 2;
+
+		&:hover {
+			background-color: #cecece;
+		}
+	}
+	&:hover {
+		color: $text-secondary;
+		cursor: pointer;
 	}
 	padding: 0 5px;
 	text-decoration: none;
-	color: inherit;
+	color: $text-primary;
 	display: inline-block;
-
-	&:hover {
-		color: #1abb9c;
-		cursor: pointer;
-	}
 }
 a.router-link-exact-active {
 	text-decoration: none;
-	color: #1abb9c;
+	color: $text-secondary;
 }
+
 nav {
 	@media (max-width: 40em) {
 		position: sticky;
 		top: 0;
 		left: 0;
 	}
-
 	width: 100%;
 }
+
 .navbar {
 	height: 100px;
 	display: grid;
@@ -77,19 +86,6 @@ nav {
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
 
-	&__menuDropButton {
-		@media (max-width: 40em) {
-			display: flex;
-			align-self: end;
-		}
-
-		height: 100%;
-		display: none;
-		width: 15%;
-		font-weight: 600;
-		align-items: center;
-	}
-
 	&__title {
 		grid-column: 2;
 		font-weight: 600;
@@ -98,44 +94,65 @@ nav {
 
 		&:hover {
 			transition: none;
-			color: #1abb9c;
+			color: $text-secondary;
 			cursor: pointer;
 		}
 	}
-	&__menuItems {
-		@media (max-width: 40em) {
-			display:none;
-			position: absolute;
-			grid-column: 5;
-			bottom: 0;
-			// border: 1px solid #4e4e4e;
-			z-index: 1;
-		}
-		align-items: center;
-		display: flex;
-		justify-content: flex-end;
-		font-weight: 600;
-		height: 100%;
 
-		&>div {
-			display: inline-block;
-			background-color: green;
-		}
-
-	}
 	&__menu {
 		@media (max-width: 40em) {
 			&:hover .navbar__menuItems {
 				display: block;
 				position: absolute;
-				// bottom: 0;
 				top: 100px;
-				
+			}
+			&:hover .navbar__menuDropButton {
+				background-color: #cecece;
+				color: $text-secondary;
 			}
 		}
+		
 		grid-column: 3 / span 2;
 		display: flex;
 		justify-content: end;
+		height: 100%;
+	}
+
+	&__menuDropButton {
+		@media (max-width: 40em) {
+			display: flex;
+		}
+		
+		justify-content: center;
+		align-items: center;
+		display: none;
+		font-weight: 600;
+		height: 100%;
+		width: 30%;
+		
+		&:hover {
+			background-color: #cecece;
+			cursor: pointer;
+			color: $text-secondary;
+		}
+	}
+
+	&__menuItems {
+		@media (max-width: 40em) {
+			display:none;
+			position: absolute;
+			bottom: 0;
+			z-index: 1;
+			
+			&:hover .navbar__menuDropButton{
+				background-color: black;
+			}
+			
+		}
+		align-items: center;
+		display: flex;
+		justify-content: flex-end;
+		font-weight: 600;
 		height: 100%;
 	}
 }
