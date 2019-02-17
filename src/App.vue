@@ -42,6 +42,9 @@ body {
   display: grid;
   grid-template-columns: 215fr repeat(3, 390fr) 215fr;
   grid-template-rows: auto 6fr 1fr;
+  @media (max-width: 50em) {
+    grid-template-rows: auto 6fr minmax(30vw, max-content);
+  }
 }
 nav {
     grid-column: 1 / span 5;
@@ -56,7 +59,7 @@ main {
     grid-template-columns: 215fr repeat(3, 390fr) 215fr;
     grid-template-rows:  450fr 335fr auto 210fr;
     @media (max-width: 50em) {
-      grid-template-rows: minmax(auto, 70vw) 400vh auto 30vw;
+      grid-template-rows: minmax(auto, 70vw) 400vh auto auto;
     }
 }
 .contentOne {
