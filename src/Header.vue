@@ -143,11 +143,7 @@ nav {
 			position: absolute;
 			bottom: 0;
 			z-index: 1;
-			
-			&:hover .navbar__menuDropButton{
-				background-color: black;
-			}
-			
+
 		}
 		align-items: center;
 		display: flex;
