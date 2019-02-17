@@ -84,7 +84,6 @@ main {
     grid-gap: 15px;
 
     @media (max-width: 50em ) {
-      // display: flex;
       grid-template-columns: 100%;
       grid-auto-rows: auto;
     }

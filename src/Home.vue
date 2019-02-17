@@ -83,10 +83,6 @@ export default {
       ]
     }
   },
-  props: {
-
-  }
-  
 }
 </script>
 
@@ -108,8 +104,17 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-    
     font-family: 'Roboto Slab', serif;
+
+    &__h1 {
+        align-self: center;
+        color: #f3f3f3;
+    }
+
+    &__h2 {
+        align-self: center;
+        color: #a8a8a8;
+    }
 
     &__button {
         background-color: #3f8dbf;
@@ -130,15 +135,6 @@ export default {
         }
     }
 
-    &__h1 {
-        align-self: center;
-        color: #f3f3f3;
-    }
-
-    &__h2 {
-        align-self: center;
-        color: #a8a8a8;
-    }
 }
 .contentOne__icon {
     align-content: center;
