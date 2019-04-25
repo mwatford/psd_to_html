@@ -27,7 +27,7 @@
     </div>
     <div class="quote">
       <picture class="quote__sign">
-        <img src="./assets/img/quotes.png" alt="#">
+        <img src="../assets/img/quotes.png" alt="#">
       </picture>
       <p class="quote__text">{{ quote }}</p>
     </div>
@@ -46,28 +46,28 @@ export default {
       news: [
         {
           id: 1,
-          img: require(`./assets/img/icon1.png`),
+          img: require(`../assets/img/icon1.png`),
           title: 'Tristiquet',
           text: 'Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
             ut fermentum massa justo risus.'
         },
         {
           id: 2,
-          img: require(`./assets/img/icon1.png`),
+          img: require(`../assets/img/icon1.png`),
           title: 'Tristiquet',
           text: 'Fusce depibis, moje commodore, tortor mauris condimentum nibh,\
             ut fermentum massa justo risus.'
         },
         {
           id: 3,
-          img: require(`./assets/img/icon1.png`),
+          img: require(`../assets/img/icon1.png`),
           title: 'Tristiquet',
           text: 'Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
             ut fermentum massa justo risus.'
         },
         {
           id: 4,
-          img: require('./assets/img/icon1.png'),
+          img: require('../assets/img/icon1.png'),
           title: 'Tristiquet',
           text: 'Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
             ut fermentum massa justo risus.'
@@ -77,9 +77,9 @@ export default {
 				  Donec id elit non mi porta gravida at eget metus. Duis mollis,\
           est non commodo luctus erat porttitor.',
       posts: [
-        { img: require('./assets/img/post1.png') },
-        { img: require('./assets/img/post1.png') },
-        { img: require('./assets/img/post1.png') },
+        { img: require('../assets/img/post1.png') },
+        { img: require('../assets/img/post1.png') },
+        { img: require('../assets/img/post1.png') },
       ]
     }
   },
@@ -91,7 +91,7 @@ export default {
     grid-column: 1 / span 5;
     grid-row: 1;
     display: flex;
-    background: url('assets/img/slider1.png') no-repeat;
+    background: url('../assets/img/slider1.png') no-repeat;
     background-position: center center;
     background-size: cover;
 
