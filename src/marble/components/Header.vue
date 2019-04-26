@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="navbar">
-      <div id="title" class="navbar__title">marble</div>
+      <div id="title" class="navbar__title" @click="toggleNav">marble</div>
       <div class="navbar__menu">
         <div class="navbar__menuItems">
           <a v-for="(item, index) in menu" :key="index" :to="item.path">{{ item.value }}</a>
@@ -13,7 +13,9 @@
 </template>
 
 <script>
+import { toggleNav } from "../../mixins.js";
 export default {
+  mixins: [toggleNav],
   data() {
     return {
       menu: [
