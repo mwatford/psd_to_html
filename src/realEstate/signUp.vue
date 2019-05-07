@@ -6,7 +6,6 @@
     <input type="password" placeholder="repeat password" v-model="passwordRepeated">
     <input type="submit" value="SIGN IN" :disabled="!formValidate" class="signUp__button">
     <p v-for="error in Array.from(errors)" :key="error" class="signUp__error">{{ error }}</p>
-    <p class="signUp__error">{{ formValidate }}</p>
   </form>
 </template>
 
