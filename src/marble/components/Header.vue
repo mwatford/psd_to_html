@@ -77,7 +77,8 @@ nav {
 
 .navbar {
   height: 100px;
-  display: grid;
+  padding: 0 13vw;
+  display: flex;
   grid-template-rows: 1fr;
   grid-template-columns: 215fr repeat(3, 390fr) 215fr;
   align-items: center;
