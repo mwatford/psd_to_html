@@ -14,8 +14,6 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@import url('/assets/fonts/stylesheet.css');
-
 * {
   display: flex;
   justify-content: center;

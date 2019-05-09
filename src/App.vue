@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <appNav v-if="appState.appNav"></appNav>
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 
