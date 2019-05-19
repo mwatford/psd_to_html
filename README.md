@@ -9,7 +9,7 @@
 - improving skills in component based approach with Vue.js 
 
 
-## 3. Build Setup
+## 3. Project Setup
 ### If you wish to download the project to run it locally on your machine follow steps below:
 1. Download the .zip or clone the respository.
 2. Navigate to the root of the project in your system CLI and run the following commands
