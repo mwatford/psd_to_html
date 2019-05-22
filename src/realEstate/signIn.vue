@@ -33,7 +33,7 @@ export default {
     height: 30px;
     padding: 0 5px;
     background: #f8f8f8;
-    // width: 300px;
+    width: 70%;
   }
 }
 </style>
