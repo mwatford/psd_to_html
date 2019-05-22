@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       appState: {
-        appNav: true
+        appNav: false
       }
     };
   },
