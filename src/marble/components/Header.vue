@@ -122,17 +122,16 @@ nav {
     @media (max-width: 40em) {
       display: flex;
     }
-
+    cursor: pointer;
     justify-content: center;
     align-items: center;
     display: none;
     font-weight: 600;
     height: 100%;
-    width: 30%;
+    width: 50px;
 
     &:hover {
       background-color: #cecece;
-      cursor: pointer;
       color: $text-secondary;
     }
   }
