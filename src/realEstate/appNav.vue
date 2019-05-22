@@ -74,7 +74,7 @@ export default {
   height: 80px;
   width: 100%;
   justify-content: space-between;
-  padding: 0 20px 0 50px;
+  padding: 0 3vw;
   z-index: 1;
   font-size: calc(0.8vw + 10px);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
