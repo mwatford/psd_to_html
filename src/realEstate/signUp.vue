@@ -79,14 +79,6 @@ export default {
       } else return false;
     }
   }
-  // watch: {
-  //   email() {
-  //     console.log(this.errors);
-  //   },
-  //   passwordRepeated(n) {
-  //     console.log(this.errors);
-  //   }
-  // }
 };
 </script>
 
@@ -111,7 +103,7 @@ export default {
     border-radius: 3px;
     height: 30px;
     padding: 0 5px;
-    width: 250px;
+    width: 70%;
     background: #f8f8f8;
   }
 
