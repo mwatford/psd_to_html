@@ -72,6 +72,9 @@ export default {
   &__img {
     width: 100%;
     object-fit: cover;
+    // max-height: 800px;
+    height: 100%;
+
   }
 
   &__imgMobile {
