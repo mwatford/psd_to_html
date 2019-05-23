@@ -68,20 +68,29 @@ export default {};
 <style lang="scss" scoped>
 .footer {
   color: whitesmoke;
-  padding: 0 12vw;
+  padding: 0 13vw;
   font-size: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 
+  ul {
+    list-style-type: square;
+  }
+
   &__containersWrapper {
+    @media (max-width: 50em) {
+      justify-content: center;
+    }
     display: flex;
     border-bottom: 1px solid gray;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   &__container {
-    max-width: 23%;
+    width: 100%;
+    max-width: 250px;
   }
 
   &__header {
