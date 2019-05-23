@@ -33,16 +33,24 @@ export default {
   left: 0;
   width: 300px;
   height: 100%;
-  background: #fff;
+  background: #242424;
   justify-content: flex-start;
   align-items: flex-start;
-  border-right: 2px solid black;
+  // border-right: 2px solid black;
   z-index: 2;
+  color: #fff;
 
   &__hide {
+    cursor: pointer;
     width: 100%;
     height: 100px;
-    background: burlywood;
+    background: #464646;
+    font-size: 24px;
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background: #000;
+    }
   }
 
   & a {
@@ -50,6 +58,7 @@ export default {
     margin: 5px 0 0 2em;
     font-size: 20px;
     font-weight: bold;
+    
     &:active,
     &:visited {
       color: inherit;

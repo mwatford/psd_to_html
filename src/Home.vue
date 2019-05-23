@@ -77,8 +77,8 @@ export default {
   &__imgMobile {
     position: absolute;
     width: 30%;
-    // max-height: 500px;
-    height: 70%;
+    max-height: 500px;
+    height: 60%;
     object-fit: cover;
     object-position: 0 0;
     border: 1px solid #4fabcf;
