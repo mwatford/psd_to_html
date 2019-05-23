@@ -1,6 +1,6 @@
 <template>
   <div class="marble">
-    <app-header></app-header>
+    <appHeader></appHeader>
     <Home></Home>
     <appFooter></appFooter>
   </div>
@@ -13,7 +13,7 @@ import Footer from "./components/Footer.vue";
 
 export default {
   components: {
-    "app-header": Header,
+    appHeader: Header,
     Home: Home,
     appFooter: Footer
   }
