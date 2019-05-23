@@ -36,7 +36,6 @@ export default {
   background: #242424;
   justify-content: flex-start;
   align-items: flex-start;
-  // border-right: 2px solid black;
   z-index: 2;
   color: #fff;
 
@@ -58,6 +57,7 @@ export default {
     margin: 5px 0 0 2em;
     font-size: 20px;
     font-weight: bold;
+    color: inherit;
     
     &:active,
     &:visited {
