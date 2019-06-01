@@ -10,7 +10,9 @@
     >
       <img :src="images[index]" class="project__img" alt>
       <img v-if="imagesMobile[index]" :src="imagesMobile[index]" class="project__imgMobile">
-      <div class="project__description">asdasdasd</div>
+      <div class="project__description">
+        <h1>{{ route.name }}</h1>
+      </div>
     </router-link>
   </div>
 </template>
@@ -22,13 +24,8 @@ export default {
   data() {
     return {
       routes,
-      images: [
-        require("./assets/ss.png"),
-        require("./assets/realestate.jpg")
-      ],
-      imagesMobile: [
-        require('./assets/marble-mobile.png')
-      ]
+      images: [require("./assets/ss.png"), require("./assets/realestate.jpg")],
+      imagesMobile: [require("./assets/marble-mobile.png")]
     };
   }
 };
@@ -73,7 +70,6 @@ export default {
     width: 100%;
     object-fit: cover;
     height: 100%;
-
   }
 
   &__imgMobile {
@@ -99,6 +95,8 @@ export default {
     width: 100%;
     transform: translateY(100%);
     transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>
