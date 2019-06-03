@@ -4,10 +4,49 @@ import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import Routes from './routes.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCoffee, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCoffee,
+  faAngleLeft,
+  faAngleRight,
+  faAngleUp,
+  faAngleDown,
+  faSearch,
+  faShoppingCart,
+  faUsers,
+  faCameraRetro,
+  faRulerCombined,
+  faMagic,
+  faExpand,
+  faBookOpen,
+  faCode,
+  faComments
+} from '@fortawesome/free-solid-svg-icons';
+
+import { faFacebookF, faTwitter, faPinterest, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-library.add(faCoffee, faAngleLeft, faAngleRight);
+library.add(
+  faCoffee,
+  faAngleLeft,
+  faAngleRight,
+  faSearch,
+  faShoppingCart,
+  faUsers,
+  faCameraRetro,
+  faRulerCombined,
+  faMagic,
+  faExpand,
+  faBookOpen,
+  faCode,
+  faComments,
+  faAngleDown,
+  faAngleUp,
+  faFacebookF,
+  faTwitter,
+  faPinterest,
+  faInstagram
+);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 

@@ -24,7 +24,11 @@ export default {
   data() {
     return {
       routes,
-      images: [require("./assets/ss.png"), require("./assets/realestate.jpg")],
+      images: [
+        require("./assets/ss.png"),
+        require("./assets/realestate.jpg"),
+        require("./assets/mogo.jpg")
+      ],
       imagesMobile: [require("./assets/marble-mobile.png")]
     };
   }
@@ -69,7 +73,9 @@ export default {
   &__img {
     width: 100%;
     object-fit: cover;
+    object-position: 0 0;
     height: 100%;
+    max-height: 800px;
   }
 
   &__imgMobile {
