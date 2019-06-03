@@ -164,7 +164,7 @@ export default {
   & img {
     object-position: 20% 0;
     width: 100%;
-    min-height: 400px;
+    height: 100%;
     object-fit: cover;
   }
 
