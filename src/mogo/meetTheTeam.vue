@@ -166,6 +166,7 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    min-height: 400px;
   }
 
   &__description {
