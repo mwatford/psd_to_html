@@ -20,19 +20,28 @@ import {
   faExpand,
   faBookOpen,
   faCode,
-  faComments
+  faComments,
+  faImage,
+  faMapMarkedAlt,
+  faEye,
+  faComment,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
   faFacebookF,
   faTwitter,
   faPinterest,
-  faInstagram
+  faInstagram,
+  faYoutube,
+  faTumblr,
+  faCodepen
 } from '@fortawesome/free-brands-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 library.add(
+  faMapMarkedAlt,
+  faImage,
   faCoffee,
   faAngleLeft,
   faAngleRight,
@@ -51,7 +60,12 @@ library.add(
   faFacebookF,
   faTwitter,
   faPinterest,
-  faInstagram
+  faInstagram,
+  faEye,
+  faComment,
+  faYoutube,
+  faTumblr,
+  faCodepen
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
