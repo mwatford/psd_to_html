@@ -158,6 +158,7 @@ export default {
   border-bottom: 1px solid lightgray;
   margin-bottom: 40px;
   padding-bottom: 40px;
+  text-align: left;
 
   &:last-child {
     border: none;
