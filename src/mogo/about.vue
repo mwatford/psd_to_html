@@ -1,36 +1,26 @@
 <template>
   <div class="intro">
-    <div class="story">
-      <h3 class="story__headerOne">What we do</h3>
-      <h2 class="story__headerTwo">STORY ABOUT US</h2>
-      <hr>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Facilis esse praesentium tempora aliquid corporis nisi eius error,
-        aliquam suscipit alias possimus accusantium adipisci temporibus vel,
-        rem, unde delectus! Doloremque, et?
-      </p>
-      <div class="story__gallery">
-        <picture class="story__img">
-          <img src="./assets/2.png">
-          <div class="overlay">
-            <font-awesome-icon :icon="['fas', 'users']" class="overlay__icon"></font-awesome-icon>
-            <h3 class="overlay__header">SUPER TEAM</h3>
-          </div>
-        </picture>
-        <picture class="story__img">
-          <img src="./assets/3.png">
-          <div class="overlay">
-            <font-awesome-icon :icon="['fas', 'users']"></font-awesome-icon>
-          </div>
-        </picture>
-        <picture class="story__img">
-          <img src="./assets/4.png">
-          <div class="overlay">
-            <font-awesome-icon :icon="['fas', 'users']"></font-awesome-icon>
-          </div>
-        </picture>
-      </div>
+    <common-header header="What we do" subheader="story about us" :description="true"></common-header>
+    <div class="gallery">
+      <picture class="gallery__img">
+        <img src="./assets/2.png">
+        <div class="overlay">
+          <font-awesome-icon :icon="['fas', 'users']" class="overlay__icon"></font-awesome-icon>
+          <h3 class="overlay__header">SUPER TEAM</h3>
+        </div>
+      </picture>
+      <picture class="gallery__img">
+        <img src="./assets/3.png">
+        <div class="overlay">
+          <font-awesome-icon :icon="['fas', 'users']"></font-awesome-icon>
+        </div>
+      </picture>
+      <picture class="gallery__img">
+        <img src="./assets/4.png">
+        <div class="overlay">
+          <font-awesome-icon :icon="['fas', 'users']"></font-awesome-icon>
+        </div>
+      </picture>
     </div>
     <div class="facts">
       <div class="facts__item">
@@ -54,7 +44,6 @@
         <p>MEMBERS</p>
       </div>
     </div>
-    <div class="services"></div>
   </div>
 </template>
 
@@ -89,42 +78,12 @@ export default {};
 }
 .intro {
   width: 100%;
-  padding: 50px 0 0 0;
+  padding: 0 0 0 0;
   flex-direction: column;
 }
-.story {
-  padding: 0 20%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-
-  &__headerOne {
-    margin: 15px 0;
-    font-family: "Dancing Script", cursive;
-  }
-
-  &__headerTwo {
-    font-family: "Montserrat", sans-serif;
-  }
-
-  & p {
-    margin-bottom: 40px;
-    color: gray;
-    width: 80%;
-  }
-
-  & hr {
-    border: 0;
-    border-top: 3px solid #ff6c78;
-    width: 60px;
-    margin: 40px 0;
-  }
-
-  &__gallery {
-    margin: 20px 0;
-    justify-content: space-between;
-  }
+.gallery {
+  padding: 40px 20% 20px 20%;
+  justify-content: space-between;
 
   &__img {
     cursor: pointer;
@@ -151,11 +110,11 @@ export default {};
 }
 .facts {
   width: 100%;
-  min-height: 300px;
+  min-height: 240px;
   background: #95e1d4;
-  margin-top: 50px;
+  margin-top: 80px;
   padding: 0 20%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   &__item {
     flex-direction: column;
