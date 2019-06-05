@@ -4,6 +4,7 @@
     <about></about>
     <services></services>
     <meetTheTeam></meetTheTeam>
+    <ourWork></ourWork>
   </div>
 </template>
 
@@ -12,13 +13,15 @@ import appHeader from "./appHeader.vue";
 import about from "./about.vue";
 import services from "./services.vue";
 import meetTheTeam from "./meetTheTeam.vue";
+import ourWork from "./ourWork.vue"
 
 export default {
   components: {
     appHeader,
     about,
     services,
-    meetTheTeam
+    meetTheTeam,
+    ourWork
   }
 };
 </script>
