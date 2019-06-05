@@ -43,8 +43,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 20%;
-  margin: 40px 0;
+  padding: 80px 20% 40px 20%;
   text-align: center;
 
   &__header {
