@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import Routes from './routes.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import commonHeader from './mogo/commonHeader.vue';
 import {
   faCoffee,
   faAngleLeft,
@@ -22,7 +23,12 @@ import {
   faComments
 } from '@fortawesome/free-solid-svg-icons';
 
-import { faFacebookF, faTwitter, faPinterest, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+  faFacebookF,
+  faTwitter,
+  faPinterest,
+  faInstagram
+} from '@fortawesome/free-brands-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -49,6 +55,7 @@ library.add(
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
+Vue.component('common-header', commonHeader);
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
