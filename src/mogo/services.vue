@@ -1,9 +1,7 @@
 <template>
   <div class="serviceContainer">
     <div class="service">
-      <h3 class="service__header1">We work with</h3>
-      <h2 class="service__header2">AMAZING SERVICES</h2>
-      <hr>
+      <common-header header="We work with" subheader="amazing services" :description="false"></common-header>
       <div class="servicePart">
         <div class="servicePart__service" v-for="service in servicePartOne" :key="service.title">
           <font-awesome-icon :icon="service.icon"></font-awesome-icon>
@@ -34,22 +32,12 @@
         <div class="serviceTwo__bannerOverlay"></div>
         <img src="./assets/5.png" alt>
       </picture>
-      <h3 class="service__header1">For all devices</h3>
-      <h2 class="service__header2">UNIQUE DESIGN</h2>
-      <hr>
+      <common-header header="For all devices" subheader="unique designs" :description="false"></common-header>
       <img src="./assets/big.png" class="serviceTwo__big">
       <img src="./assets/mobile.png" class="serviceTwo__mobile">
     </div>
     <div class="serviceThree">
-      <h3 class="service__header1">Service</h3>
-      <h2 class="service__header2">WHAT WE DO</h2>
-      <hr>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Deserunt dolor sed quae iste at vero fuga nostrum?
-        Voluptatibus dolore ipsa laborum placeat illum molestias corporis earum?
-        Alias et neque nemo!
-      </p>
+      <common-header header="Service" subheader="what we do" :description="true"></common-header>
       <div class="serviceThree__content">
         <img class="serviceThree__img" src="./assets/6.png">
         <div class="serviceThree__descriptions">
@@ -58,11 +46,10 @@
             v-for="(service, index) in servicePartOne"
             :key="service.title"
           >
-            <div class="serviceThree__descriptionTitle">
+            <div class="serviceThree__descriptionTitle" @click="toggle(index)">
               <font-awesome-icon :icon="service.icon" class="mainIcon"></font-awesome-icon>
               <h3>{{ service.title.toUpperCase() }}</h3>
               <font-awesome-icon
-                @click="toggle(index)"
                 class="serviceThree__descriptionOpen"
                 :icon="['fas', service.description ? 'angle-up' : 'angle-down']"
               ></font-awesome-icon>
@@ -88,7 +75,7 @@
           necessitatibus repudiandae pariatur expedita similique.
           Nobis dolor odio laborum est, vel quasi.
         </p>
-        <h4 class="quote__author">Anonio Margheriti</h4>
+        <h4 class="quote__author">Susan Boyler</h4>
       </div>
     </div>
   </div>
@@ -158,44 +145,23 @@ export default {
   flex-direction: column;
 }
 .service {
-  padding: 40px 20% 0 20%;
   position: relative;
   flex-direction: column;
   width: 100%;
   align-items: center;
   min-height: 600px;
   text-align: center;
-
-  &__header1 {
-    margin: 15px 0;
-    font-family: "Dancing Script", cursive;
-  }
-
-  &__header2 {
-    font-family: "Montserrat", sans-serif;
-  }
-
-  & hr {
-    border: 0;
-    border-top: 3px solid #ff6c78;
-    width: 60px;
-    margin: 40px 0;
-  }
-
-  & > p {
-    color: gray;
-    width: 80%;
-  }
 }
 .servicePart {
-  width: 100%;
+  width: 60%;
   justify-content: space-between;
   border-bottom: 1px solid lightgray;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
 
   &:last-child {
     border: none;
+    padding: 0;
   }
 
   &__service {
@@ -260,9 +226,10 @@ export default {
 .serviceThree {
   @extend .service;
   background: #fff;
+  padding-bottom: 40px;
 
   &__content {
-    width: 100%;
+    width: 60%;
     margin: 40px 0;
     justify-content: space-between;
     align-items: flex-start;
@@ -283,7 +250,7 @@ export default {
   &__description {
     width: 100%;
     flex-direction: column;
-    box-shadow: 0 0 8px 0 lightgray;
+    box-shadow: 0 0 4px 0 #e0e0e0;
     margin: 0 0 15px 0;
 
     &:last-child {
@@ -292,21 +259,26 @@ export default {
   }
 
   &__descriptionTitle {
+    cursor: pointer;
     position: relative;
     font-size: 20px;
     align-items: center;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     padding: 0 10px;
 
     & h3 {
       margin-left: 15px;
+    }
+
+    &:hover {
+      color: #95e1d4;
     }
   }
 
   &__descriptionText {
     padding: 10px;
     text-align: left;
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     border-top: 0;
     width: 100%;
     color: gray;
@@ -316,11 +288,6 @@ export default {
     position: absolute;
     right: 10px;
     font-size: 25px;
-    cursor: pointer;
-
-    &:hover {
-      color: #95e1d4;
-    }
   }
 }
 .quote {
@@ -354,7 +321,7 @@ export default {
     color: #000;
 
     &::before {
-      content: '';
+      content: "";
       width: 60px;
       border-top: 3px solid #ff6c78;
       position: absolute;

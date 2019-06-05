@@ -1,17 +1,7 @@
 <template>
   <div class="team">
+    <common-header header="Who we are" subheader="meet our team" :description="true"></common-header>
     <div class="teamContainer">
-      <h3 class="teamContainer__header1">Who we are</h3>
-      <h2 class="teamContainer__header2">MEET OUR TEAM</h2>
-      <hr>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
-        libero quos mollitia nihil id accusantium impedit! Rem cumque aperiam
-        ducimus! Nobis rem beatae voluptatibus reiciendis laboriosam sapiente
-        cumque id recusandae.
-      </p>
-    </div>
-    <div class="teamContainer__members">
       <div class="member" v-for="member in members" :key="name">
         <picture>
           <div class="overlay">
@@ -36,6 +26,9 @@
         <h4 class="member__description">Lorem ipsum</h4>
       </div>
     </div>
+    <div class="brands">
+      <img v-for="(icon, index) in brands" :key="index" :src="icon">
+    </div>
   </div>
 </template>
 
@@ -56,6 +49,14 @@ export default {
           name: "asd asd",
           img: require("./assets/9.png")
         }
+      ],
+      brands: [
+        require('./assets/icon1.png'),
+        require('./assets/icon2.png'),
+        require('./assets/icon3.png'),
+        require('./assets/icon4.png'),
+        require('./assets/icon5.png'),
+        require('./assets/icon6.png'),
       ]
     };
   }
@@ -103,45 +104,17 @@ export default {
   flex-direction: column;
 }
 .teamContainer {
-  padding: 40px 20% 0 20%;
   position: relative;
-  flex-direction: column;
-  width: 100%;
+  width: 60%;
   align-items: center;
-  text-align: center;
-
-  &__header1 {
-    margin: 15px 0;
-    font-family: "Dancing Script", cursive;
-  }
-
-  &__header2 {
-    font-family: "Montserrat", sans-serif;
-  }
-
-  & hr {
-    border: 0;
-    border-top: 3px solid #ff6c78;
-    width: 60px;
-    margin: 40px 0;
-  }
-
-  & > p {
-    color: gray;
-    width: 80%;
-  }
-
-  &__members {
-    padding: 0 20%;
-    margin: 60px;
-    justify-content: space-between;
-  }
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px auto 80px auto;
 }
 .member {
   cursor: pointer;
   position: relative;
   width: 31%;
-  // min-height: 400px;
   height: 100%;
   flex-direction: column;
   align-items: center;
@@ -172,5 +145,12 @@ export default {
   &__description {
     color: gray;
   }
+}
+.brands {
+  width: 100%;
+  padding: 20px 20%;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f5f5;
 }
 </style>
