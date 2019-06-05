@@ -47,7 +47,7 @@ export default {
       news: [
         {
           id: 1,
-          img: require(`../assets/img/icon1.png`),
+          img: require(`../assets/img/marbleIcon.png`),
           title: "Tristiquet",
           text:
             "Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
@@ -55,7 +55,7 @@ export default {
         },
         {
           id: 2,
-          img: require(`../assets/img/icon1.png`),
+          img: require(`../assets/img/marbleIcon.png`),
           title: "Tristiquet",
           text:
             "Fusce depibis, moje commodore, tortor mauris condimentum nibh,\
@@ -63,7 +63,7 @@ export default {
         },
         {
           id: 3,
-          img: require(`../assets/img/icon1.png`),
+          img: require(`../assets/img/marbleIcon.png`),
           title: "Tristiquet",
           text:
             "Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
@@ -71,7 +71,7 @@ export default {
         },
         {
           id: 4,
-          img: require("../assets/img/icon1.png"),
+          img: require("../assets/img/marbleIcon.png"),
           title: "Tristiquet",
           text:
             "Fusce depibis, cursus commodo, tortor mauris condimentum nibh,\
