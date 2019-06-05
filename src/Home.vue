@@ -37,7 +37,7 @@ export default {
           img: require("./assets/realestate.jpg")
         },
         {
-          name: "Marble",
+          name: "MoGo",
           description: "",
           path: "/mogo",
           img: require("./assets/mogo.jpg")
