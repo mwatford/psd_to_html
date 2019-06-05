@@ -2,34 +2,47 @@
   <div class="home">
     <h2>Projects</h2>
     <router-link
-      v-for="(route, index) in routes.slice(1)"
-      :key="route.name"
-      :to="route.path"
+      v-for="(project, index) in projects"
+      :key="project.name"
+      :to="project.path"
       class="project"
       tag="picture"
     >
-      <img :src="images[index]" class="project__img" alt>
-      <img v-if="imagesMobile[index]" :src="imagesMobile[index]" class="project__imgMobile">
+      <img :src="project.img" class="project__img" alt>
+      <img v-if="project.imgMobile" :src="project.imgMobile" class="project__imgMobile">
       <div class="project__description">
-        <h1>{{ route.name }}</h1>
+        <h1>{{ project.name }}</h1>
       </div>
     </router-link>
   </div>
 </template>
 
 <script>
-import routes from "./routes.js";
 
 export default {
   data() {
     return {
-      routes,
-      images: [
-        require("./assets/ss.png"),
-        require("./assets/realestate.jpg"),
-        require("./assets/mogo.jpg")
+      projects: [
+        {
+          name: "Marble",
+          description: "",
+          path: "/marble",
+          img: require("./assets/ss.png"),
+          imgMobile: require("./assets/marble-mobile.png")
+        },
+        {
+          name: "Real Estate",
+          description: "",
+          path: "/real-estate",
+          img: require("./assets/realestate.jpg")
+        },
+        {
+          name: "Marble",
+          description: "",
+          path: "/mogo",
+          img: require("./assets/mogo.jpg")
+        }
       ],
-      imagesMobile: [require("./assets/marble-mobile.png")]
     };
   }
 };

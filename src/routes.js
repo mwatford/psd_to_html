@@ -6,7 +6,7 @@ import Mogo from './mogo/Mogo.vue'
 //add new routes to the end
 export default [
   { path: '/', component: Home, name: 'Home' },
-  { path: '/Marble', component: Marble, name: 'Marble' },
+  { path: '/marble', component: Marble, name: 'Marble' },
   { path: '/real-estate', component: realEstate, name: 'Real Estate' },
   { path: '/mogo', component: Mogo, name: 'MoGo' },
 ];
