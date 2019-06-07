@@ -3,6 +3,16 @@
     <div class="overlay"></div>
     <div class="toolbar">
       <h2 class="toolbar__title" @click="toggleNav">MoGo</h2>
+      <h1 class="navigation__open" @click="nav = !nav">&equiv;</h1>
+      <nav class="navigation--mobile" v-if="nav">
+        <h3 class="navigation__route">ABOUT</h3>
+        <h3 class="navigation__route">SERVICE</h3>
+        <h3 class="navigation__route">WORK</h3>
+        <h3 class="navigation__route">BLOG</h3>
+        <h3 class="navigation__route">CONTACT</h3>
+        <font-awesome-icon :icon="['fas', 'search']" class="navigation__icon"></font-awesome-icon>
+        <font-awesome-icon :icon="['fas', 'shopping-cart']" class="navigation__icon"></font-awesome-icon>
+      </nav>
       <nav class="navigation">
         <h3 class="navigation__route">ABOUT</h3>
         <h3 class="navigation__route">SERVICE</h3>
@@ -19,23 +29,23 @@
       <hr>
       <button>LEARN MORE</button>
     </div>
-    <div class="banner__smthWrapper">
-      <div class="banner__smth">
+    <div class="banner__progressWrapper">
+      <div class="banner__progress">
         <progress value="30" max="100"></progress>
         <h3>01</h3>
         <h4>INTRO</h4>
       </div>
-      <div class="banner__smth">
+      <div class="banner__progress">
         <progress value="0" max="100"></progress>
         <h3>02</h3>
         <h4>WORK</h4>
       </div>
-      <div class="banner__smth">
+      <div class="banner__progress">
         <progress value="0" max="100"></progress>
         <h3>03</h3>
         <h4>ABOUT</h4>
       </div>
-      <div class="banner__smth">
+      <div class="banner__progress">
         <progress value="0" max="100"></progress>
         <h3>04</h3>
         <h4>CONTACTS</h4>
@@ -47,7 +57,12 @@
 <script>
 import { toggleNav } from "../mixins";
 export default {
-  mixins: [toggleNav]
+  mixins: [toggleNav],
+  data() {
+    return {
+      nav: false
+    };
+  }
 };
 </script>
 
@@ -70,6 +85,9 @@ export default {
   z-index: -1;
 }
 .banner {
+  @media (max-width: 1200px) {
+    padding: 0 2vw;
+  }
   width: 100%;
   position: relative;
   color: #fff;
@@ -83,6 +101,9 @@ export default {
   z-index: 1;
 
   &__greetings {
+    @media (max-width: 1200px) {
+      font-size: 30px;
+    }
     align-items: center;
     flex-direction: column;
     min-height: 420px;
@@ -110,6 +131,9 @@ export default {
     }
 
     & button {
+      @media (max-width: 1200px) {
+        margin-bottom: 30px;
+      }
       background: transparent;
       border: 3px solid #fff;
       border-radius: 3px;
@@ -127,19 +151,26 @@ export default {
     }
   }
 
-  &__smthWrapper {
+  &__progressWrapper {
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
     width: 100%;
     justify-content: space-between;
   }
 
-  &__smth {
+  &__progress {
     position: relative;
     width: 100%;
-    margin: 15px 10px;
+    margin: 15px 10px 30px 10px;
     align-items: flex-end;
+    min-width: 10px;
+    max-width: 370px;
 
     & h3 {
-      margin-right: 5px;
+      margin-right: 3px;
     }
 
     & progress {
@@ -158,6 +189,10 @@ export default {
   }
 }
 .toolbar {
+  @media (max-width: 1200px) {
+    // padding: 20px 20%;
+  }
+  position: relative;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -169,17 +204,54 @@ export default {
   }
 }
 .navigation {
+  @media (max-width: 1200px) {
+    display: none;
+  }
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 60%;
   background: none;
   color: #fff;
+
+  &--mobile {
+    @media (min-width: 1201px) {
+      display: none;
+    }
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 350px;
+    }
+    background: #ffffff;
+    position: absolute;
+    width: 100vw;
+    transform: translateX(-50%);
+    top: 100%;
+    left: 50%;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+    padding: 20px 2vw;
+    color: #ff6c78;
+  }
+
+  &__open {
+    @media (max-width: 1200px) {
+      display: flex;
+    }
+    cursor: pointer;
+    display: none;
+    &:hover {
+      color: #ffd35b;
+    }
+  }
 
   &__route,
   &__icon {
     cursor: pointer;
     position: relative;
+    margin: 5px 0;
 
     &::after {
       content: "";
