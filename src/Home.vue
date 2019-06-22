@@ -30,12 +30,12 @@ export default {
           img: require("./assets/ss.png"),
           imgMobile: require("./assets/marble-mobile.png")
         },
-        {
-          name: "Real Estate",
-          description: "",
-          path: "/real-estate",
-          img: require("./assets/realestate.jpg")
-        },
+        // {
+        //   name: "Real Estate",
+        //   description: "",
+        //   path: "/real-estate",
+        //   img: require("./assets/realestate.jpg")
+        // },
         {
           name: "MoGo",
           description: "",
