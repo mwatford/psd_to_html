@@ -1,5 +1,5 @@
 <template>
-  <div class="marble">
+  <div class="marble" v-cloak>
     <appHeader></appHeader>
     <Home></Home>
     <appFooter></appFooter>
