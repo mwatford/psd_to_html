@@ -2,7 +2,7 @@
   <div class="home">
     <h2>Projects</h2>
     <router-link
-      v-for="(project, index) in projects"
+      v-for="(project) in projects"
       :key="project.name"
       :to="project.path"
       class="project"
