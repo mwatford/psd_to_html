@@ -1,8 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
-import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-import Routes from './routes.js';
+import { router } from './routes.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import commonHeader from './mogo/commonHeader.vue';
 import {
@@ -71,15 +70,9 @@ library.add(
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('common-header', commonHeader);
 
-Vue.use(VueRouter);
 Vue.use(VueResource);
 
 window.eventBus = new Vue();
-
-const router = new VueRouter({
-  routes: Routes,
-  mode: 'history'
-});
 
 new Vue({
   el: '#app',

@@ -2,7 +2,7 @@
   <div class="home">
     <h2>Projects</h2>
     <router-link
-      v-for="(project, index) in projects"
+      v-for="(project) in projects"
       :key="project.name"
       :to="project.path"
       class="project"
@@ -30,12 +30,12 @@ export default {
           img: require("./assets/ss.png"),
           imgMobile: require("./assets/marble-mobile.png")
         },
-        {
-          name: "Real Estate",
-          description: "",
-          path: "/real-estate",
-          img: require("./assets/realestate.jpg")
-        },
+        // {
+        //   name: "Real Estate",
+        //   description: "",
+        //   path: "/real-estate",
+        //   img: require("./assets/realestate.jpg")
+        // },
         {
           name: "MoGo",
           description: "",

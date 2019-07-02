@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <appNav v-if="appState.appNav"></appNav>
     <router-view/>
   </div>

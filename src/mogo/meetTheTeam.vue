@@ -2,7 +2,7 @@
   <div class="team">
     <common-header header="Who we are" subheader="meet our team" :description="true"></common-header>
     <div class="teamContainer">
-      <div class="member" v-for="member in members" :key="name">
+      <div class="member" v-for="member in members" :key="member.name">
         <picture>
           <div class="overlay">
             <div>
