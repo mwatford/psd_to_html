@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import routes from "./routes.js";
+import { routes } from "./routes.js";
 import { toggleNav } from "./mixins.js";
 export default {
   mixins: [toggleNav],
