@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mogo">
     <appHeader></appHeader>
     <about></about>
     <services></services>
@@ -40,8 +40,12 @@ export default {
 
 <style lang="scss" scoped>
 * {
+  display: flex;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.mogo {
+  flex-direction: column;
 }
 </style>
