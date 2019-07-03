@@ -48,6 +48,7 @@ export default {
   align-items: center;
   padding: 80px 20% 40px 20%;
   text-align: center;
+  width: 100%;
 
   &__header {
     margin: 15px 0;
