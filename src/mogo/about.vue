@@ -3,20 +3,20 @@
     <common-header header="What we do" subheader="story about us" :description="true"></common-header>
     <div class="gallery">
       <picture class="gallery__img">
-        <img src="./assets/2.png">
+        <img src="./assets/2.png" />
         <div class="overlay">
           <font-awesome-icon :icon="['fas', 'users']" class="overlay__icon"></font-awesome-icon>
           <h3 class="overlay__header">SUPER TEAM</h3>
         </div>
       </picture>
       <picture class="gallery__img">
-        <img src="./assets/3.png">
+        <img src="./assets/3.png" />
         <div class="overlay">
           <font-awesome-icon :icon="['fas', 'users']"></font-awesome-icon>
         </div>
       </picture>
       <picture class="gallery__img">
-        <img src="./assets/4.png">
+        <img src="./assets/4.png" />
         <div class="overlay">
           <font-awesome-icon :icon="['fas', 'users']"></font-awesome-icon>
         </div>
@@ -78,14 +78,22 @@ export default {};
 }
 .intro {
   width: 100%;
-  padding: 0 0 0 0;
   flex-direction: column;
 }
 .gallery {
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 2vw;
+  }
   padding: 40px 20% 20px 20%;
   justify-content: space-between;
 
   &__img {
+    @media (max-width: 1200px) {
+      width: 100%;
+      margin: 5px 0;
+    }
     cursor: pointer;
     position: relative;
     width: 30%;
@@ -99,6 +107,10 @@ export default {};
     }
 
     &:hover {
+      @media (max-width: 1200px) {
+        transform: none;
+        box-shadow: none;
+      }
       transform: translate(-5px, -5px);
       box-shadow: 8px 8px 0px 0px #95e1d4;
 
@@ -109,6 +121,11 @@ export default {};
   }
 }
 .facts {
+  @media (max-width: 1200px) {
+    padding: 20px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
   width: 100%;
   min-height: 240px;
   background: #95e1d4;
@@ -117,6 +134,11 @@ export default {};
   font-family: "Montserrat", sans-serif;
 
   &__item {
+    @media (max-width: 1200px) {
+      width: 40%;
+      border: none;
+      min-width: 250px;;
+    }
     flex-direction: column;
     width: 100%;
     border-left: 1px solid #fff;
@@ -124,8 +146,13 @@ export default {};
     justify-content: center;
     align-items: center;
     font-size: 40px;
+    text-align: center;
+    padding: 0 10px;
 
     &:last-child {
+      @media (max-width: 1200px) {
+        border-right: none;
+      }
       border-right: 1px solid #fff;
     }
 
