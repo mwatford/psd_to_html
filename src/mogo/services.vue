@@ -265,15 +265,22 @@ export default {
   padding-bottom: 40px;
 
   &__content {
+    @media (max-width: 1200px) {
+      width: 100%;
+      padding: 0 2vw;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
     width: 60%;
     margin: 40px 0;
     justify-content: space-between;
-    align-items: flex-start;
   }
 
   &__img {
     width: 48%;
     object-fit: contain;
+    min-width: 330px;
+    margin: 0 auto 20px auto;
   }
 
   &__descriptions {
@@ -281,6 +288,9 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     max-height: 400px;
+    min-width: 330px;
+    margin: auto;
+    // max-width: 300px;
   }
 
   &__description {
