@@ -1,9 +1,9 @@
-import Vue from 'vue';
-import App from './App.vue';
-import VueResource from 'vue-resource';
-import { router } from './routes.js';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import commonHeader from './mogo/commonHeader.vue';
+import Vue from "vue";
+import App from "./App.vue";
+import VueResource from "vue-resource";
+import { router } from "./routes.js";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import commonHeader from "./mogo/commonHeader.vue";
 import {
   faCoffee,
   faAngleLeft,
@@ -24,7 +24,7 @@ import {
   faMapMarkedAlt,
   faEye,
   faComment,
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
 
 import {
   faFacebookF,
@@ -34,9 +34,9 @@ import {
   faYoutube,
   faTumblr,
   faCodepen
-} from '@fortawesome/free-brands-svg-icons';
+} from "@fortawesome/free-brands-svg-icons";
 
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 library.add(
   faMapMarkedAlt,
@@ -67,15 +67,15 @@ library.add(
   faCodepen
 );
 
-Vue.component('font-awesome-icon', FontAwesomeIcon);
-Vue.component('common-header', commonHeader);
+Vue.component("font-awesome-icon", FontAwesomeIcon);
+Vue.component("common-header", commonHeader);
 
 Vue.use(VueResource);
 
 window.eventBus = new Vue();
 
 new Vue({
-  el: '#app',
+  el: "#app",
   render: h => h(App),
   router
 });
