@@ -39,6 +39,9 @@ export default {
   box-sizing: border-box;
 }
 .commonHeader {
+  @media (max-width: 1200px) {
+    padding: 40px 2vw;
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
