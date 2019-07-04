@@ -162,6 +162,8 @@ export default {};
     border-radius: 50%;
     height: 150px;
     width: 150px;
+    min-height: 150px;
+    min-width: 150px;
   }
 
   &__wrapper {
