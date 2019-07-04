@@ -96,7 +96,8 @@ export default {
 }
 
 .blog {
-  max-width: 250px;
+  min-width: 250px;
+  width: 30%;
   flex-direction: column;
   margin: 15px 10px;
 
