@@ -4,7 +4,7 @@
     <div class="blogs">
       <div class="blog" v-for="(blog, index) in blogs" :key="index">
         <picture class="blog__img">
-          <img :src="blog.img">
+          <img :src="blog.img" />
           <div class="blog__date">
             <h2>{{ blog.date.day }}</h2>
             <p>{{ blog.date.month.toUpperCase() }}</p>
@@ -86,19 +86,27 @@ export default {
   align-items: center;
 }
 .blogs {
+  @media (max-width: 1200px) {
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
   width: 60%;
   justify-content: space-between;
 }
 
 .blog {
+  min-width: 250px;
   width: 30%;
   flex-direction: column;
+  margin: 15px 10px;
 
   &__img {
     position: relative;
     width: 100%;
     height: 100%;
     min-height: 250px;
+    min-width: 200px;
 
     & img {
       object-fit: cover;

@@ -24,29 +24,29 @@
           </div>
         </div>
         <form class="section__subscribe" @submit.prevent>
-          <input type="text" placeholder="e-mail">
-          <input type="submit" value="SUBSCRIBE">
+          <input type="text" placeholder="e-mail" />
+          <input type="submit" value="SUBSCRIBE" />
         </form>
       </div>
       <div class="section--narrow section">
         <h4 class="section__title">BLOGS</h4>
         <div class="blog">
           <picture class="blog__post">
-            <img src="./assets/mini11.png">
+            <img src="./assets/mini11.png" />
             <div class="blog__textWrapper">
               <h4 class="blog__postTitle">Lorem ipsum dolor sit amet</h4>
               <h6 class="blog__postSubtitle">Lorem ipsum dolor sit amet</h6>
             </div>
           </picture>
           <picture class="blog__post">
-            <img src="./assets/mini12.png">
+            <img src="./assets/mini12.png" />
             <div class="blog__textWrapper">
               <h4 class="blog__postTitle">Lorem ipsum dolor sit amet</h4>
               <h6 class="blog__postSubtitle">Lorem ipsum dolor sit amet</h6>
             </div>
           </picture>
           <picture class="blog__post">
-            <img src="./assets/mini13.png">
+            <img src="./assets/mini13.png" />
             <div class="blog__textWrapper">
               <h4 class="blog__postTitle">Lorem ipsum dolor sit amet</h4>
               <h6 class="blog__postSubtitle">Lorem ipsum dolor sit amet</h6>
@@ -61,7 +61,8 @@
             v-for="post in 9"
             :src="require(`./assets/mini${post}.png`)"
             class="instagramGallery__post"
-          >
+            :key="post"
+          />
           <a href="#">View more photos</a>
         </div>
       </div>
@@ -87,33 +88,40 @@ export default {};
 .footer {
   background: #f8f8f8;
   font-family: "Montserrat", sans-serif;
-  padding: 60px 20% 15px 20%;
   width: 100%;
   flex-direction: column;
   font-size: 18px;
+  align-items: center;
+  justify-content: center;
 
   &__contentWrapper {
-    width: 100%;
-    justify-content: space-between;
-    flex-direction: row;
+    @media (max-width: 1200px) {
+      width: 100%;
+      padding: 0 2vw;
+    }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-columns: 3fr;
+    grid-gap: 20px;
+    margin: 60px 0 0 0;
+    width: 60%;
+    justify-items: start;
   }
 }
 
 .section {
   color: #cdcdcd;
   flex-direction: column;
-  margin-right: 30px;
-
-  &:last-child {
-    margin-right: 0;
-  }
+  width: 100%;
 
   &--wide {
-    width: 40%;
+    @media (max-width: 1200px) {
+      max-width: 350px;
+    }
+    max-width: 400px;
   }
 
   &--narrow {
-    width: 30%;
     color: #000;
   }
 
@@ -170,13 +178,13 @@ export default {};
     }
 
     & input[type="submit"] {
-      width: 35%;
       color: #ffffff;
       background: #95e1d4;
       font-family: "Montserrat", sans-serif;
       justify-content: center;
     }
   }
+
   & a {
     font-size: 14px;
     text-decoration: none;
@@ -190,24 +198,21 @@ export default {};
 }
 .blog {
   margin-top: 30px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
-  min-width: 350px;
   flex-wrap: wrap;
 
   &__post {
     width: 100%;
-    justify-content: space-between;
 
     & img {
       object-fit: cover;
-      width: auto;
+      width: 35%;
+      max-width: 180px;
     }
   }
 
   &__textWrapper {
+    margin-left: 20px;
     width: 60%;
     font-size: 14px;
     flex-direction: column;
@@ -220,21 +225,24 @@ export default {};
   }
 }
 .instagramGallery {
-  min-width: 350px;
   flex-wrap: wrap;
   margin-top: 28px;
+  max-width: 340px;
 
   &__post {
     margin: 2px;
   }
 }
 .copyright {
-  width: 100%;
+  @media (max-width: 1200px) {
+    width: 96%;
+  }
+  width: 60%;
   border-top: 1px solid lightgray;
   padding-top: 15px;
   justify-content: center;
   font-size: 14px;
-  margin-top: 60px;
+  margin: 60px 0 15px 0;
 
   & strong {
     color: #f5827f;

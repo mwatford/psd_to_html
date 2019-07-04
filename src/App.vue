@@ -31,6 +31,7 @@ export default {
 body {
   background-color: #f7f7f7;
   margin: 0;
+  padding: 0;
   overflow-y: scroll;
   font-family: "Oswald", sans-serif;
 }

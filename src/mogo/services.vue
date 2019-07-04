@@ -30,16 +30,16 @@
     <div class="serviceTwo">
       <picture class="serviceTwo__banner">
         <div class="serviceTwo__bannerOverlay"></div>
-        <img src="./assets/5.png" alt>
+        <img src="./assets/5.png" alt />
       </picture>
       <common-header header="For all devices" subheader="unique designs" :description="false"></common-header>
-      <img src="./assets/big.png" class="serviceTwo__big">
-      <img src="./assets/mobile.png" class="serviceTwo__mobile">
+      <img src="./assets/big.png" class="serviceTwo__big" />
+      <img src="./assets/mobile.png" class="serviceTwo__mobile" />
     </div>
     <div class="serviceThree">
       <common-header header="Service" subheader="what we do" :description="true"></common-header>
       <div class="serviceThree__content">
-        <img class="serviceThree__img" src="./assets/6.png">
+        <img class="serviceThree__img" src="./assets/6.png" />
         <div class="serviceThree__descriptions">
           <div
             class="serviceThree__description"
@@ -145,6 +145,11 @@ export default {
   flex-direction: column;
 }
 .service {
+  @media (max-width: 1200px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   position: relative;
   flex-direction: column;
   width: 100%;
@@ -153,6 +158,13 @@ export default {
   text-align: center;
 }
 .servicePart {
+  @media (max-width: 1200px) {
+    width: 80%;
+    padding: 0 2vw;
+    flex-wrap: wrap;
+    border: none;
+    max-width: 300px;
+  }
   width: 60%;
   justify-content: space-between;
   border-bottom: 1px solid lightgray;
@@ -161,11 +173,18 @@ export default {
   text-align: left;
 
   &:last-child {
+    @media (max-width: 1200px) {
+      padding: 0 2vw;
+    }
     border: none;
     padding: 0;
   }
 
   &__service {
+    @media (max-width: 1200px) {
+      width: 100%;
+      margin: 20px 0;
+    }
     width: 30%;
     align-items: space-between;
 
@@ -173,7 +192,9 @@ export default {
       grid-column: 1;
       grid-row: 1 / span 2;
       color: #95e1d4;
-      font-size: 26px;
+      height: 30px;
+      width: 100%;
+      max-width: 30px;
       margin: 5px 35px 0 0;
     }
   }
@@ -185,10 +206,15 @@ export default {
   }
 }
 .serviceTwo {
-  @extend .service;
+  // @extend .service;
+  @media (max-width: 1200px) {
+  }
   width: 100%;
   height: 700px;
-  justify-content: space-between;
+  // justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 
   &__banner {
     position: absolute;
@@ -213,11 +239,20 @@ export default {
   }
 
   &__big {
-    width: 450px;
+    @media (max-width: 1200px) {
+      // margin: 0 2vw;
+      width: 96%;
+    }
+    width: 35%;
+    max-width: 450px;
     z-index: -1;
   }
 
   &__mobile {
+    @media (max-width: 1200px) {
+      transform: translateX(50%);
+    }
+    height: 50%;
     position: absolute;
     bottom: -10%;
     transform: translateX(100%);
@@ -230,15 +265,22 @@ export default {
   padding-bottom: 40px;
 
   &__content {
+    @media (max-width: 1200px) {
+      width: 100%;
+      padding: 0 2vw;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
     width: 60%;
     margin: 40px 0;
     justify-content: space-between;
-    align-items: flex-start;
   }
 
   &__img {
     width: 48%;
     object-fit: contain;
+    min-width: 330px;
+    margin: 0 auto 20px auto;
   }
 
   &__descriptions {
@@ -246,6 +288,9 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     max-height: 400px;
+    min-width: 330px;
+    margin: 0 auto;
+    // max-width: 300px;
   }
 
   &__description {
@@ -292,6 +337,10 @@ export default {
   }
 }
 .quote {
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    padding: 50px 2vw;
+  }
   width: 100%;
   background: #f8f8f8;
   padding: 50px 30%;
@@ -300,6 +349,9 @@ export default {
   color: gray;
 
   &__icon {
+    @media (max-width: 1200px) {
+      margin: 0 0 20px 0;
+    }
     font-size: 75px;
     color: #95e1d4;
     border: 3px solid #95e1d4;
@@ -308,13 +360,21 @@ export default {
   }
 
   &__wrapper {
+    @media (max-width: 1200px) {
+      text-align: center;
+      align-items: center;
+      width: 80%;
+    }
     width: 100%;
     flex-direction: column;
     height: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__author {
+    @media (max-width: 1200px) {
+      margin-top: 20px;
+    }
     position: relative;
     margin-left: 70px;
     font-family: "Dancing Script", cursive;

@@ -1,17 +1,17 @@
 <template>
   <div class="opinions">
     <picture class="opinions__background">
-      <img src="./assets/mountain.png" alt>
+      <img src="./assets/mountain.png" alt />
       <div class="opinions__overlay"></div>
     </picture>
     <common-header header="Happy Clients" subheader="what people say" :description="false"></common-header>
     <div class="comments">
-      <div class="comment" v-for="each in 4">
-        <img class="comment__img" :src="require(`./assets/circle${each}.png`)">
+      <div class="comment" v-for="each in 4" :key="each">
+        <img class="comment__img" :src="require(`./assets/circle${each}.png`)" />
         <div class="comment__wrapper">
           <h2 class="comment__author">Random Guy {{ each }}</h2>
           <h3 class="comment__role">Random Role {{ each }}</h3>
-          <hr>
+          <hr />
           <p class="comment__body">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Eligendi numquam repellat asperiores, in odio obcaecati nihil,
@@ -40,7 +40,7 @@ export default {};
   flex-direction: column;
   align-items: center;
   padding-bottom: 60px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   &__background {
     position: absolute;
@@ -64,15 +64,22 @@ export default {};
   }
 }
 .comments {
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
   width: 60%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .comment {
+  @media (max-width: 1200px) {
+    width: auto;
+    max-width: 320px;
+  }
   align-items: flex-start;
   justify-content: center;
-  width: 50%;
-  margin: 20px 0;
+  width: 40%;
+  margin: 20px 10px;
 
   &__img {
     object-fit: cover;

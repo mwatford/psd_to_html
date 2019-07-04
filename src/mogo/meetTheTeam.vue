@@ -20,14 +20,14 @@
               </div>
             </div>
           </div>
-          <img :src="member.img">
+          <img :src="member.img" />
         </picture>
         <h4>{{ member.name }}</h4>
         <h4 class="member__description">Lorem ipsum</h4>
       </div>
     </div>
     <div class="brands">
-      <img v-for="(icon, index) in brands" :key="index" :src="icon">
+      <img v-for="(icon, index) in brands" :key="index" :src="icon" class="brands__item" />
     </div>
   </div>
 </template>
@@ -51,12 +51,12 @@ export default {
         }
       ],
       brands: [
-        require('./assets/icon1.png'),
-        require('./assets/icon2.png'),
-        require('./assets/icon3.png'),
-        require('./assets/icon4.png'),
-        require('./assets/icon5.png'),
-        require('./assets/icon6.png'),
+        require("./assets/icon1.png"),
+        require("./assets/icon2.png"),
+        require("./assets/icon3.png"),
+        require("./assets/icon4.png"),
+        require("./assets/icon5.png"),
+        require("./assets/icon6.png")
       ]
     };
   }
@@ -104,6 +104,11 @@ export default {
   flex-direction: column;
 }
 .teamContainer {
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
   position: relative;
   width: 60%;
   align-items: center;
@@ -112,12 +117,17 @@ export default {
   margin: 40px auto 80px auto;
 }
 .member {
+  @media (max-width: 1200px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
   cursor: pointer;
   position: relative;
   width: 31%;
   height: 100%;
   flex-direction: column;
   align-items: center;
+  max-width: 340px;
 
   & picture {
     margin-bottom: 10px;
@@ -147,10 +157,27 @@ export default {
   }
 }
 .brands {
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    // justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+  }
+  margin-top: 40px;
   width: 100%;
   padding: 20px 20%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: #f5f5f5;
+
+  &__item {
+    @media (max-width: 1200px) {
+      width: 50%;
+    }
+    flex-direction: row;
+    max-width: 120px;
+    max-height: 120px;
+    margin: 5px;
+  }
 }
 </style>
