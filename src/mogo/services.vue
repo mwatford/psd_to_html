@@ -289,7 +289,7 @@ export default {
     justify-content: flex-start;
     max-height: 400px;
     min-width: 330px;
-    margin: auto;
+    margin: 0 auto;
     // max-width: 300px;
   }
 
@@ -337,6 +337,10 @@ export default {
   }
 }
 .quote {
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    padding: 50px 2vw;
+  }
   width: 100%;
   background: #f8f8f8;
   padding: 50px 30%;
@@ -345,6 +349,9 @@ export default {
   color: gray;
 
   &__icon {
+    @media (max-width: 1200px) {
+      margin: 0 0 20px 0;
+    }
     font-size: 75px;
     color: #95e1d4;
     border: 3px solid #95e1d4;
@@ -353,13 +360,21 @@ export default {
   }
 
   &__wrapper {
+    @media (max-width: 1200px) {
+      text-align: center;
+      align-items: center;
+      width: 80%;
+    }
     width: 100%;
     flex-direction: column;
     height: 100%;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__author {
+    @media (max-width: 1200px) {
+      margin-top: 20px;
+    }
     position: relative;
     margin-left: 70px;
     font-family: "Dancing Script", cursive;
