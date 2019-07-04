@@ -21,7 +21,7 @@ import ourWork from "./ourWork.vue";
 import opinions from "./opinions.vue";
 import blog from "./blog.vue";
 import map from "./map.vue";
-import appFooter from './footer.vue'
+import appFooter from "./footer.vue";
 
 export default {
   components: {
