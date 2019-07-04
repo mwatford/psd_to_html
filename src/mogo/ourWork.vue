@@ -7,53 +7,53 @@
           <font-awesome-icon :icon="['fas', 'image']" class="overlay__icon"></font-awesome-icon>
           <p>Lorem ipsum</p>
         </div>
-        <img src="./assets/gallery7.png">
+        <img src="./assets/gallery7.png" />
       </picture>
       <picture class="gallery__img">
         <div class="overlay">
           <font-awesome-icon :icon="['fas', 'image']" class="overlay__icon"></font-awesome-icon>
           <p>Lorem ipsum</p>
         </div>
-        <img src="./assets/gallery6.png">
+        <img src="./assets/gallery6.png" />
       </picture>
       <picture class="gallery__img--special">
         <div class="overlay">
           <font-awesome-icon :icon="['fas', 'image']" class="overlay__icon"></font-awesome-icon>
           <p>Lorem ipsum</p>
         </div>
-        <img src="./assets/gallery3.png">
+        <img src="./assets/gallery3.png" />
       </picture>
       <picture class="gallery__img">
         <div class="overlay">
           <font-awesome-icon :icon="['fas', 'image']" class="overlay__icon"></font-awesome-icon>
           <p>Lorem ipsum</p>
         </div>
-        <img src="./assets/gallery5.png">
+        <img src="./assets/gallery5.png" />
       </picture>
       <picture class="gallery__img">
         <div class="overlay">
           <font-awesome-icon :icon="['fas', 'image']" class="overlay__icon"></font-awesome-icon>
           <p>Lorem ipsum</p>
         </div>
-        <img src="./assets/gallery4.png">
+        <img src="./assets/gallery4.png" />
       </picture>
       <picture class="gallery__img">
         <div class="overlay">
           <font-awesome-icon :icon="['fas', 'image']" class="overlay__icon"></font-awesome-icon>
           <p>Lorem ipsum</p>
         </div>
-        <img src="./assets/gallery2.png">
+        <img src="./assets/gallery2.png" />
       </picture>
       <picture class="gallery__img">
         <div class="overlay">
           <font-awesome-icon :icon="['fas', 'image']" class="overlay__icon"></font-awesome-icon>
           <p>Lorem ipsum</p>
         </div>
-        <img src="./assets/gallery1.png">
+        <img src="./assets/gallery1.png" />
       </picture>
     </div>
     <div class="quote">
-      <img src="./assets/quote.png" class="quote__img">
+      <img src="./assets/quote.png" class="quote__img" />
       <div class="quote__wrapper">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -87,6 +87,12 @@ export default {};
 }
 
 .gallery {
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
   margin: 40px 0 0 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -96,8 +102,6 @@ export default {};
   &__img {
     cursor: pointer;
     position: relative;
-    width: 100%;
-    height: 100%;
 
     &:hover .overlay {
       display: flex;
@@ -109,6 +113,12 @@ export default {};
     }
 
     & img {
+      @media (max-width: 1200px) {
+        width: 20vw;
+        height: 20vw;
+        min-width: 175px;
+        min-height: 175px;
+      }
       width: 100%;
       object-fit: cover;
       object-position: 50% 80%;
@@ -133,6 +143,10 @@ export default {};
   }
 }
 .quote {
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    padding: 80px 2vw;
+  }
   width: 100%;
   background: #fff;
   padding: 80px 30%;
@@ -141,6 +155,9 @@ export default {};
   color: gray;
 
   &__img {
+    @media (max-width: 1200px) {
+      margin: 0 0 20px 0;
+    }
     margin-right: 20px;
     border-radius: 50%;
     height: 150px;
@@ -148,6 +165,11 @@ export default {};
   }
 
   &__wrapper {
+    @media (max-width: 1200px) {
+      text-align: center;
+      align-items: center;
+      width: 80%;
+    }
     width: 100%;
     flex-direction: column;
     height: 100%;
@@ -155,6 +177,9 @@ export default {};
   }
 
   &__author {
+    @media (max-width: 1200px) {
+      margin-top: 20px;
+    }
     position: relative;
     margin-left: 70px;
     font-family: "Dancing Script", cursive;
